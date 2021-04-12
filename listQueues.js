@@ -2,9 +2,9 @@ require('dotenv').config()
 const freeclimbSDK = require('@freeclimb/sdk')
 
 const accountId = process.env.ACCOUNT_ID
-const authToken = process.env.AUTH_TOKEN
+const apiKey = process.env.API_KEY
 // your freeclimb API key (available in the Dashboard) - be sure to set up environment variables to store these values
-const freeclimb = freeclimbSDK(accountId, authToken)
+const freeclimb = freeclimbSDK(accountId, apiKey)
 
 getQueues().then(queues => {
   // Use Queues
